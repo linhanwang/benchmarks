@@ -4,9 +4,10 @@ CPU Caches:
   L1 Instruction 32K (x2)
   L2 Unified 256K (x2)
   L3 Unified 3072K (x1)
-Load Average: 0.45, 0.80, 0.79
+Load Average: 0.61, 0.67, 0.72
 --------------------------------------------------------------------
 Benchmark                          Time             CPU   Iterations
 --------------------------------------------------------------------
-BM_RAPIDJSON_SERIALIZE           543 ns          540 ns      1292568
-BM_NLOHMANNJSON_SERIALIZE       3369 ns         3363 ns       207511
+BM_RAPIDJSON_SERIALIZE           497 ns          495 ns      1361393
+BM_NLOHMANNJSON_SERIALIZE       3452 ns         3446 ns       203136
+BM_SNSPRINTF                    1436 ns         1414 ns       580701
