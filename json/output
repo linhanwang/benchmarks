@@ -1,0 +1,12 @@
+Run on (4 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x2)
+  L1 Instruction 32K (x2)
+  L2 Unified 256K (x2)
+  L3 Unified 3072K (x1)
+Load Average: 0.45, 0.80, 0.79
+--------------------------------------------------------------------
+Benchmark                          Time             CPU   Iterations
+--------------------------------------------------------------------
+BM_RAPIDJSON_SERIALIZE           543 ns          540 ns      1292568
+BM_NLOHMANNJSON_SERIALIZE       3369 ns         3363 ns       207511

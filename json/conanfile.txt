@@ -1,0 +1,7 @@
+[requires]
+benchmark/1.5.0
+rapidjson/1.1.0
+nlohmann_json/3.9.0
+
+[generators]
+cmake
