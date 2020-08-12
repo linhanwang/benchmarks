@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(n_benchmark)
+project(json_benchmark)
 
 #set(CMAKE_CXX_STANDARD 14)
 
