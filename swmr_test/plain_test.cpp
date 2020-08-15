@@ -46,8 +46,5 @@ int main() {
 
     cout << endl;
 
-    cout << NowNs() - NowNs() << endl;
-
-    std::cout << "Hello, World!" << std::endl;
     return 0;
 }

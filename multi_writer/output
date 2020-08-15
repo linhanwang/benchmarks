@@ -1,0 +1,22 @@
+/home/linhan/CLionProjects/benchmarks/multi_writer/cmake-build-release/volatile_test
+counter: 15600538
+time used: 38208533
+
+Process finished with exit code 0
+
+/home/linhan/CLionProjects/benchmarks/multi_writer/cmake-build-release/plain_test
+counter: 30000000
+time used: 126914
+
+Process finished with exit code 0
+
+/home/linhan/CLionProjects/benchmarks/multi_writer/cmake-build-release/atmomic_test
+counter: 30000000
+time used: 510867899
+
+Process finished with exit code 0
+
+
+Explaination:
+The result is strange. After watching plain_test.s, I found out that compiler exchange
+the for loop with an "add 100000" operation. So, plain_test is right and fast.
