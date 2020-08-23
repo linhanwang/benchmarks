@@ -1,16 +1,8 @@
-cmake_minimum_required(VERSION 3.17)
-project(swmr_test)
+add_executable(atomic_swmr.test atomic_swmr.test.cpp)
+target_link_libraries(atomic_swmr.test PRIVATE Threads::Threads)
 
-set(CMAKE_CXX_STANDARD 14)
+add_executable(volatile_swmr.test volatile_swmr.test.cpp)
+target_link_libraries(volatile_swmr.test PRIVATE Threads::Threads)
 
-set(THREADS_PREFER_PTHREAD_FLAG ON)
-find_package(Threads REQUIRED)
-
-add_executable(atmomic_test atomic_test.cpp)
-target_link_libraries(atmomic_test PRIVATE Threads::Threads)
-
-add_executable(volatile_test volatile_test.cpp)
-target_link_libraries(volatile_test PRIVATE Threads::Threads)
-
-add_executable(plain_test plain_test.cpp)
-target_link_libraries(plain_test PRIVATE Threads::Threads)
+add_executable(plain_swmr.test plain_swmr.test.cpp)
+target_link_libraries(plain_swmr.test PRIVATE Threads::Threads)

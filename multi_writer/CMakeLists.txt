@@ -1,16 +1,8 @@
-cmake_minimum_required(VERSION 3.17)
-project(mult_writer_test)
+add_executable(atmomic_multi_writer.test atomic_multi_writer.test.cpp)
+target_link_libraries(atmomic_multi_writer.test PRIVATE Threads::Threads)
 
-set(CMAKE_CXX_STANDARD 14)
+add_executable(volatile_multi_writer.test volatile_multi_writer.test.cpp)
+target_link_libraries(volatile_multi_writer.test PRIVATE Threads::Threads)
 
-set(THREADS_PREFER_PTHREAD_FLAG ON)
-find_package(Threads REQUIRED)
-
-add_executable(atmomic_test atomic_test.cpp)
-target_link_libraries(atmomic_test PRIVATE Threads::Threads)
-
-add_executable(volatile_test volatile_test.cpp)
-target_link_libraries(volatile_test PRIVATE Threads::Threads)
-
-add_executable(plain_test plain_test.cpp)
-target_link_libraries(plain_test PRIVATE Threads::Threads)
+add_executable(plain_multi_writer.test plain_multi_writer.test.cpp)
+target_link_libraries(plain_multi_writer.test PRIVATE Threads::Threads)
