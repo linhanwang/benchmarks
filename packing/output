@@ -1,0 +1,27 @@
+debug:
+Run on (4 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x2)
+  L1 Instruction 32K (x2)
+  L2 Unified 256K (x2)
+  L3 Unified 3072K (x1)
+Load Average: 0.62, 0.27, 0.21
+---------------------------------------------------------------
+Benchmark                     Time             CPU   Iterations
+---------------------------------------------------------------
+BM_STRUCT_SUM              4.41 ns         4.40 ns    156990139
+BM_PACKED_STRUCT_SUM       4.37 ns         4.37 ns    160765301
+
+release:
+Run on (4 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x2)
+  L1 Instruction 32K (x2)
+  L2 Unified 256K (x2)
+  L3 Unified 3072K (x1)
+Load Average: 0.95, 0.38, 0.25
+---------------------------------------------------------------
+Benchmark                     Time             CPU   Iterations
+---------------------------------------------------------------
+BM_STRUCT_SUM              1.03 ns         1.03 ns    640544218
+BM_PACKED_STRUCT_SUM       1.02 ns         1.02 ns    683787508
