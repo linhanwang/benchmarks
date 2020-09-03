@@ -17,7 +17,7 @@ inline TimeStampNs NowNs() {
 /*
  * Generate 64-bit timestamp.
  */
-static __inline__ long long get_timestamp(void) {
+static __inline__ long long NowTscNs(void) {
     unsigned int __a,__d;
 
     __asm__ __volatile__("rdtsc" : "=a" (__a), "=d" (__d));

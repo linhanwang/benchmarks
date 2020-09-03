@@ -1,0 +1,12 @@
+Run on (4 X 3500 MHz CPU s)
+CPU Caches:
+  L1 Data 32K (x2)
+  L1 Instruction 32K (x2)
+  L2 Unified 256K (x2)
+  L3 Unified 3072K (x1)
+Load Average: 0.37, 0.55, 0.34
+--------------------------------------------------------
+Benchmark              Time             CPU   Iterations
+--------------------------------------------------------
+BM_TASKFLOW       17.3 ns         17.3 ns     40373722
+BM_SEQUENTIAL         6.92 ns         6.91 ns    101332813
