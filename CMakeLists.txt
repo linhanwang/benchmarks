@@ -11,9 +11,12 @@ find_package(Threads REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
+add_compile_options("-march=broadwell")
+
 add_subdirectory(clock_time)
 add_subdirectory(json)
 add_subdirectory(multi_writer)
 add_subdirectory(swmr_test)
 add_subdirectory(packing)
 add_subdirectory(taskflow)
+add_subdirectory(simd_sum)
