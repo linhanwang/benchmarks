@@ -38,6 +38,7 @@ static void BM_DotProductSum20Double(benchmark::State& state) {
         arr[i] = i * 2.0;
     }
 
+    benchmark::DoNotOptimize(arr);
     for (auto _ : state) {
         benchmark::DoNotOptimize(blaze::sum(arr));
     }
@@ -49,3 +50,4 @@ BENCHMARK(BM_AccumulateSumDouble);
 BENCHMARK(BM_DotProductSum20Double);
 
 // Run the benchmark
+BENCHMARK_MAIN();

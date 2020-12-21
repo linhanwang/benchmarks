@@ -1,0 +1,14 @@
+Running ./bin/simd_sum.benchmark
+Run on (4 X 2000 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x2)
+  L1 Instruction 32 KiB (x2)
+  L2 Unified 256 KiB (x2)
+  L3 Unified 4096 KiB (x1)
+Load Average: 2.52, 2.44, 2.85
+-------------------------------------------------------------------
+Benchmark                         Time             CPU   Iterations
+-------------------------------------------------------------------
+BM_LoopSum20Double             6.93 ns         6.91 ns     95995612
+BM_AccumulateSumDouble         50.7 ns         50.6 ns     13037810
+BM_DotProductSum20Double       2.13 ns         2.10 ns    339397231

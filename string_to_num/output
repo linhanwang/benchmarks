@@ -1,0 +1,16 @@
+Running ./bin/string_to_num.benchmark
+Run on (4 X 2000 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x2)
+  L1 Instruction 32 KiB (x2)
+  L2 Unified 256 KiB (x2)
+  L3 Unified 4096 KiB (x1)
+Load Average: 2.06, 2.49, 2.95
+----------------------------------------------------------
+Benchmark                Time             CPU   Iterations
+----------------------------------------------------------
+BM_Atof               33.1 ns         33.1 ns     21278148
+BM_Stof                107 ns          107 ns      6442054
+BM_FromCharsInt       15.3 ns         15.3 ns     45155173
+BM_Atoi               29.1 ns         29.0 ns     24438781
+BM_Stoi               49.4 ns         49.3 ns     12404090

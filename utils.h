@@ -28,6 +28,8 @@ inline void pinThread(int cpu) {
     if (cpu < 0) {
         return;
     }
+
+#ifndef __APPLE__
     cpu_set_t cpuset;
     CPU_ZERO(&cpuset);
     CPU_SET(cpu, &cpuset);
@@ -35,4 +37,5 @@ inline void pinThread(int cpu) {
         perror("pthread_setaffinity_np");
         exit(1);
     }
+#endif
 }
