@@ -6,43 +6,43 @@
 using namespace std;
 
 int main() {
-    constexpr int loop_time = 10000000;
-    volatile uint64_t counter{0};
+  constexpr int loop_time = 10000000;
+  volatile uint64_t counter{0};
 
-    TimeStampNs start = NowNs();
+  TimeStampNs start = NowNs();
 
-    thread t1([&counter]() {
-        pinThread(1);
+  thread t1([&counter]() {
+    pinThread(1);
 
-        for (int i = 0; i < loop_time; ++i) {
-            ++counter;
-        }
-    });
+    for (int i = 0; i < loop_time; ++i) {
+      ++counter;
+    }
+  });
 
-    thread t2([&counter]() {
-        pinThread(2);
+  thread t2([&counter]() {
+    pinThread(2);
 
-        for (int i = 0; i < loop_time; ++i) {
-            ++counter;
-        }
-    });
+    for (int i = 0; i < loop_time; ++i) {
+      ++counter;
+    }
+  });
 
-    thread t3([&counter]() {
-        pinThread(3);
+  thread t3([&counter]() {
+    pinThread(3);
 
-        for (int i = 0; i < loop_time; ++i) {
-            ++counter;
-        }
-    });
+    for (int i = 0; i < loop_time; ++i) {
+      ++counter;
+    }
+  });
 
-    t1.join();
-    t2.join();
-    t3.join();
+  t1.join();
+  t2.join();
+  t3.join();
 
-    TimeStampNs end = NowNs();
+  TimeStampNs end = NowNs();
 
-    cout << "counter: " << counter << endl;
-    cout << "time used: " << end - start << endl;
+  cout << "counter: " << counter << endl;
+  cout << "time used: " << end - start << endl;
 
-    return 0;
+  return 0;
 }

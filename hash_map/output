@@ -1,0 +1,83 @@
+Run on (8 X 4300 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x4)
+  L1 Instruction 32 KiB (x4)
+  L2 Unified 256 KiB (x4)
+  L3 Unified 6144 KiB (x1)
+Load Average: 0.58, 0.74, 0.78
+---------------------------------------------------------------------------------------------------------------
+Benchmark                                                                     Time             CPU   Iterations
+---------------------------------------------------------------------------------------------------------------
+BM_Baseline/32                                                             15.6 ns         15.6 ns     44665486
+BM_Baseline/64                                                             15.6 ns         15.6 ns     45335626
+BM_Baseline/512                                                            15.6 ns         15.6 ns     43885133
+BM_Baseline/4096                                                           15.3 ns         15.3 ns     44983306
+BM_ToStrBaseline                                                           68.9 ns         68.9 ns     10286661
+BM_Hash<std::hash<std::string>>                                            74.4 ns         74.4 ns      9466946
+BM_Hash<absl::Hash<std::string>>                                           69.4 ns         69.4 ns     10092698
+BM_Find<std::unordered_map<int, int>>/32                                   29.1 ns         29.1 ns     24078108
+BM_Find<std::unordered_map<int, int>>/64                                   29.2 ns         29.2 ns     23863844
+BM_Find<std::unordered_map<int, int>>/512                                  27.3 ns         27.3 ns     25331573
+BM_Find<std::unordered_map<int, int>>/4096                                 27.4 ns         27.4 ns     25200710
+BM_Find<absl::flat_hash_map<int, int>>/32                                  22.8 ns         22.8 ns     30473735
+BM_Find<absl::flat_hash_map<int, int>>/64                                  23.2 ns         23.2 ns     30042136
+BM_Find<absl::flat_hash_map<int, int>>/512                                 23.6 ns         23.6 ns     29568578
+BM_Find<absl::flat_hash_map<int, int>>/4096                                23.0 ns         23.0 ns     30167576
+BM_Find<absl::node_hash_map<int, int>>/32                                  22.9 ns         22.9 ns     30500339
+BM_Find<absl::node_hash_map<int, int>>/64                                  23.4 ns         23.4 ns     29878068
+BM_Find<absl::node_hash_map<int, int>>/512                                 23.6 ns         23.6 ns     29496127
+BM_Find<absl::node_hash_map<int, int>>/4096                                23.3 ns         23.3 ns     29962859
+BM_InsertAndDelete<std::unordered_map<int, int>>/32                        44.9 ns         44.9 ns     15299037
+BM_InsertAndDelete<std::unordered_map<int, int>>/64                        44.5 ns         44.5 ns     15538372
+BM_InsertAndDelete<std::unordered_map<int, int>>/512                       44.9 ns         44.9 ns     15380290
+BM_InsertAndDelete<std::unordered_map<int, int>>/4096                      44.7 ns         44.7 ns     15568603
+BM_InsertAndDelete<absl::flat_hash_map<int, int>>/32                       28.5 ns         28.5 ns     24540418
+BM_InsertAndDelete<absl::flat_hash_map<int, int>>/64                       28.4 ns         28.4 ns     24421999
+BM_InsertAndDelete<absl::flat_hash_map<int, int>>/512                      28.8 ns         28.8 ns     24172688
+BM_InsertAndDelete<absl::flat_hash_map<int, int>>/4096                     29.6 ns         29.6 ns     23570129
+BM_InsertAndDelete<absl::node_hash_map<int, int>>/32                       38.8 ns         38.8 ns     17942616
+BM_InsertAndDelete<absl::node_hash_map<int, int>>/64                       39.0 ns         39.0 ns     17747761
+BM_InsertAndDelete<absl::node_hash_map<int, int>>/512                      39.0 ns         39.0 ns     17838612
+BM_InsertAndDelete<absl::node_hash_map<int, int>>/4096                     39.7 ns         39.7 ns     17502370
+BM_InsertBaseline/1024/128/iterations:1000                                 2130 ns         2120 ns         1000
+BM_InsertBaseline/4096/128/iterations:1000                                 2126 ns         2128 ns         1000
+BM_InsertBaseline/8192/128/iterations:1000                                 2118 ns         2132 ns         1000
+BM_InsertBaseline/1024/512/iterations:1000                                 7998 ns         7999 ns         1000
+BM_InsertBaseline/4096/512/iterations:1000                                 8003 ns         8005 ns         1000
+BM_InsertBaseline/8192/512/iterations:1000                                 8053 ns         8054 ns         1000
+BM_Insert<std::unordered_map<int, int>>/1024/128/iterations:1000           5385 ns         5367 ns         1000
+BM_Insert<std::unordered_map<int, int>>/4096/128/iterations:1000           6797 ns         6679 ns         1000
+BM_Insert<std::unordered_map<int, int>>/8192/128/iterations:1000           7285 ns         7157 ns         1000
+BM_Insert<std::unordered_map<int, int>>/1024/512/iterations:1000          21520 ns        21512 ns         1000
+BM_Insert<std::unordered_map<int, int>>/4096/512/iterations:1000          22990 ns        22924 ns         1000
+BM_Insert<std::unordered_map<int, int>>/8192/512/iterations:1000          25099 ns        24995 ns         1000
+BM_Insert<absl::flat_hash_map<int, int>>/1024/128/iterations:1000          2835 ns         2833 ns         1000
+BM_Insert<absl::flat_hash_map<int, int>>/4096/128/iterations:1000          3168 ns         3129 ns         1000
+BM_Insert<absl::flat_hash_map<int, int>>/8192/128/iterations:1000          3523 ns         3464 ns         1000
+BM_Insert<absl::flat_hash_map<int, int>>/1024/512/iterations:1000         11141 ns        11138 ns         1000
+BM_Insert<absl::flat_hash_map<int, int>>/4096/512/iterations:1000         12249 ns        12205 ns         1000
+BM_Insert<absl::flat_hash_map<int, int>>/8192/512/iterations:1000         12608 ns        12562 ns         1000
+BM_Insert<absl::node_hash_map<int, int>>/1024/128/iterations:1000          4152 ns         4126 ns         1000
+BM_Insert<absl::node_hash_map<int, int>>/4096/128/iterations:1000          5032 ns         4956 ns         1000
+BM_Insert<absl::node_hash_map<int, int>>/8192/128/iterations:1000          6015 ns         5912 ns         1000
+BM_Insert<absl::node_hash_map<int, int>>/1024/512/iterations:1000         14127 ns        14109 ns         1000
+BM_Insert<absl::node_hash_map<int, int>>/4096/512/iterations:1000         15752 ns        15686 ns         1000
+BM_Insert<absl::node_hash_map<int, int>>/8192/512/iterations:1000         17819 ns        17724 ns         1000
+BM_Iteration<std::unordered_map<int, int>>/1024/128/iterations:1000         616 ns          616 ns         1000
+BM_Iteration<std::unordered_map<int, int>>/4096/128/iterations:1000        5002 ns         5002 ns         1000
+BM_Iteration<std::unordered_map<int, int>>/8192/128/iterations:1000       12402 ns        12402 ns         1000
+BM_Iteration<std::unordered_map<int, int>>/1024/512/iterations:1000         595 ns          595 ns         1000
+BM_Iteration<std::unordered_map<int, int>>/4096/512/iterations:1000        5271 ns         5271 ns         1000
+BM_Iteration<std::unordered_map<int, int>>/8192/512/iterations:1000       12413 ns        12413 ns         1000
+BM_Iteration<absl::flat_hash_map<int, int>>/1024/128/iterations:1000       1044 ns         1044 ns         1000
+BM_Iteration<absl::flat_hash_map<int, int>>/4096/128/iterations:1000       4786 ns         4786 ns         1000
+BM_Iteration<absl::flat_hash_map<int, int>>/8192/128/iterations:1000      15314 ns        15314 ns         1000
+BM_Iteration<absl::flat_hash_map<int, int>>/1024/512/iterations:1000       1010 ns         1010 ns         1000
+BM_Iteration<absl::flat_hash_map<int, int>>/4096/512/iterations:1000       4849 ns         4849 ns         1000
+BM_Iteration<absl::flat_hash_map<int, int>>/8192/512/iterations:1000      15675 ns        15676 ns         1000
+BM_Iteration<absl::node_hash_map<int, int>>/1024/128/iterations:1000       1001 ns         1001 ns         1000
+BM_Iteration<absl::node_hash_map<int, int>>/4096/128/iterations:1000       6085 ns         6085 ns         1000
+BM_Iteration<absl::node_hash_map<int, int>>/8192/128/iterations:1000      15632 ns        15632 ns         1000
+BM_Iteration<absl::node_hash_map<int, int>>/1024/512/iterations:1000       1010 ns         1010 ns         1000
+BM_Iteration<absl::node_hash_map<int, int>>/4096/512/iterations:1000       5502 ns         5502 ns         1000
+BM_Iteration<absl::node_hash_map<int, int>>/8192/512/iterations:1000      15668 ns        15668 ns         1000
