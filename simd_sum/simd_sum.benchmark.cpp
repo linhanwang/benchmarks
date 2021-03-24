@@ -48,6 +48,3 @@ static void BM_DotProductSum20Double(benchmark::State& state) {
 BENCHMARK(BM_LoopSum20Double);
 BENCHMARK(BM_AccumulateSumDouble);
 BENCHMARK(BM_DotProductSum20Double);
-
-// Run the benchmark
-BENCHMARK_MAIN();

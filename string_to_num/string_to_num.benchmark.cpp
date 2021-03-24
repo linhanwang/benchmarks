@@ -44,7 +44,3 @@ BENCHMARK(BM_Stof);
 BENCHMARK(BM_FromCharsInt);
 BENCHMARK(BM_Atoi);
 BENCHMARK(BM_Stoi);
-
-
-// Run the benchmark
-BENCHMARK_MAIN();

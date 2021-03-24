@@ -18,6 +18,3 @@ static void BM_TSC_TIME(benchmark::State& state) {
 // Register the function as a benchmark
 BENCHMARK(BM_CLOCK_TIME);
 BENCHMARK(BM_TSC_TIME);
-
-// Run the benchmark
-BENCHMARK_MAIN();

@@ -1,0 +1,12 @@
+[requires]
+gtest/1.10.0
+glog/0.4.0
+benchmark/1.5.2
+rapidjson/1.1.0
+nlohmann_json/3.9.0
+taskflow/2.5.0
+blaze/3.8
+abseil/20200923.3
+
+[generators]
+cmake

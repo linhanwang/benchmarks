@@ -41,6 +41,3 @@ static void BM_SEQUENTIAL(benchmark::State& state) {
 BENCHMARK(BM_TASKFLOW);
 BENCHMARK(BM_SEQUENTIAL);
 
-// Run the benchmark
-BENCHMARK_MAIN();
-

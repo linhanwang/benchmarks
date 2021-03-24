@@ -4,7 +4,7 @@ project(benchmarks)
 set(CMAKE_CXX_STANDARD 17)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
+conan_basic_setup(TARGETS)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
@@ -12,8 +12,6 @@ find_package(Threads REQUIRED)
 include_directories(${PROJECT_SOURCE_DIR})
 
 add_compile_options("-march=broadwell")
-
-message(STATUS ${CMAKE_INCLUDE_PATH} "asdfadf")
 
 add_subdirectory(clock_time)
 add_subdirectory(json)
