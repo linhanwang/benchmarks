@@ -1,6 +1,9 @@
 #pragma once
 
-#include <stdint.h>
+#include <cstdlib>
+#include <cstdint>
+#include <cstdio>
+#include <cerrno>
 #include <time.h>
 #include <pthread.h>
 
