@@ -12,6 +12,8 @@ find_package(Threads REQUIRED)
 include_directories(${PROJECT_SOURCE_DIR})
 
 add_compile_options("-march=broadwell")
+#add_compile_options("-march=skylake-avx512")
+add_compile_options("-fno-omit-frame-pointer")
 
 add_subdirectory(clock_time)
 add_subdirectory(json)
@@ -24,3 +26,4 @@ add_subdirectory(polymorphism)
 add_subdirectory(string_to_num)
 add_subdirectory(hash_map)
 add_subdirectory(dgemm)
+add_subdirectory(arch)

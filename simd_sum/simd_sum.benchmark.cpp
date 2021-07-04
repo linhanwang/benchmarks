@@ -2,7 +2,6 @@
 #include <blaze/Blaze.h>
 
 #include <functional>
-#include <iostream>
 
 constexpr int kArrSize = 20;
 
