@@ -1,0 +1,17 @@
+2021-09-18T01:10:09+08:00
+Running ./bin/branch_miss.bench
+Run on (12 X 4400 MHz CPU s)
+CPU Caches:
+  L1 Data 48 KiB (x6)
+  L1 Instruction 32 KiB (x6)
+  L2 Unified 512 KiB (x6)
+  L3 Unified 12288 KiB (x1)
+Load Average: 1.52, 2.66, 2.37
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.
+--------------------------------------------------------
+Benchmark              Time             CPU   Iterations
+--------------------------------------------------------
+BM_condition       0.769 ns        0.769 ns    883842212
+BM_lookup          0.308 ns        0.308 ns   1000000000
+BM_condition2       5.02 ns         5.02 ns    137064986
+BM_direct           5.27 ns         5.27 ns    1293814
